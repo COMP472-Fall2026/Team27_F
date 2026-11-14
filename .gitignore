@@ -1,0 +1,10 @@
+# Kaggle data: download it from the competition page (too large for GitHub)
+Project_info/
+
+# Python / Jupyter temporary files
+__pycache__/
+.ipynb_checkpoints/
+cache/
+
+# empty scratch notebook
+Test.ipynb

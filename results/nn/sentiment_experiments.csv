@@ -1,0 +1,28 @@
+task,hyperparameter,value,train_acc,val_acc,gap,best_epoch,seconds
+sentiment,preprocess,none,0.7347,0.6867,0.048,47,132.2
+sentiment,preprocess,standardize,0.8305,0.6808,0.1497,27,79.4
+sentiment,hidden_sizes,[],0.6856,0.6708,0.0148,12,18.2
+sentiment,hidden_sizes,[64],0.7237,0.6783,0.0454,20,36.0
+sentiment,hidden_sizes,[256],0.7502,0.6812,0.069,15,37.6
+sentiment,hidden_sizes,[512],0.8305,0.6808,0.1497,27,77.9
+sentiment,hidden_sizes,"[256, 64]",0.7385,0.6825,0.056,17,49.1
+sentiment,hidden_sizes,"[512, 256, 128]",0.7861,0.6808,0.1053,21,98.0
+sentiment,activation,relu,0.8305,0.6808,0.1497,27,72.8
+sentiment,activation,tanh,0.7265,0.6775,0.049,16,13.8
+sentiment,activation,sigmoid,0.7015,0.6767,0.0248,17,14.7
+sentiment,dropout,0.0,0.7409,0.68,0.0609,6,11.7
+sentiment,dropout,0.2,0.7702,0.6804,0.0898,10,23.1
+sentiment,dropout,0.5,0.8305,0.6808,0.1497,27,53.3
+sentiment,dropout,0.7,0.7462,0.6783,0.0679,15,51.3
+sentiment,lr,0.01,0.7515,0.6375,0.114,21,50.0
+sentiment,lr,0.001,0.7467,0.6708,0.0758,3,34.7
+sentiment,lr,0.0001,0.8305,0.6808,0.1497,27,75.4
+sentiment,weight_decay,0.0,0.8144,0.6796,0.1348,24,73.9
+sentiment,weight_decay,0.001,0.8141,0.68,0.1341,24,47.6
+sentiment,weight_decay,0.01,0.8305,0.6808,0.1497,27,90.0
+sentiment,weight_decay,0.1,0.83,0.6808,0.1492,27,98.2
+sentiment,batch_size,32,0.7158,0.6808,0.035,3,59.1
+sentiment,batch_size,128,0.8305,0.6808,0.1497,27,77.7
+sentiment,batch_size,512,0.7456,0.6787,0.0669,20,34.1
+sentiment,optimizer,adam,0.8305,0.6808,0.1497,27,69.5
+sentiment,optimizer,sgd,0.7803,0.6796,0.1007,7,13.0
