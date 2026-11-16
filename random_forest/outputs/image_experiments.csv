@@ -1,0 +1,12 @@
+task,n_trees,max_features,max_depth,train_acc,val_acc,seconds
+image,100,sqrt,None,1.0,0.2928,
+image,50,sqrt,None,1.0,0.2395,
+image,30,0.1,None,,0.211,369.8
+image,30,sqrt,None,,0.2062,256.8
+image,25,sqrt,None,1.0,0.1903,
+image,30,sqrt,20,,0.1862,114.7
+image,30,log2,None,,0.1797,270.4
+image,30,sqrt,10,,0.1555,28.8
+image,10,sqrt,None,0.9965,0.137,
+image,5,sqrt,None,0.9525,0.0995,
+image,1,sqrt,None,0.649,0.0747,
