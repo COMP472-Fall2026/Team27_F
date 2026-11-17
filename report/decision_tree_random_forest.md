@@ -22,7 +22,9 @@ common class.
 Before training, each feature gets at most 63 candidate thresholds (quantiles), and every value is replaced
 by its bin index. At a node, one `np.bincount` builds a (feature × bin × class) count table, and a cumulative
 sum over bins gives the class counts left of every threshold. The gain of every candidate question is
-therefore computed in one vectorised step.
+therefore computed in one vectorised step. This is the same exhaustive search as in Lab 5, which tries the
+midpoint between every pair of consecutive values, restricted to 63 quantile thresholds per feature. With
+more than 63 thresholds, accuracy does not improve (section 5.5 of the notebook).
 
 *Zero-aware thresholds.* 85% of the image feature values are exactly 0. Plain quantiles put most thresholds
 of a feature at 0: on average only 10 distinct thresholds per feature were left. Our binner adds quantiles of
@@ -160,13 +162,19 @@ projecting onto the LDA directions, those directions *are* the axes:
   of it, and no feature has more than 0.5%). This matches the observation that image class evidence is
   distributed rather than concentrated, which is exactly what one-feature-at-a-time questions handle worst.
 
-### Comparison with the other models
+### Comparison with the other models, and the ensemble
 
 Trees are our weakest family on image (forest 0.369 vs k-NN 0.601). k-NN with a χ² histogram distance
 compares the whole sparse vector at once, which suits these features. On sentiment, the tree models on LDA
-features (0.669–0.671) beat k-NN (0.600) and come close to the neural network (0.687). In a quick check,
-averaging the forest's image probabilities with k-NN's vote shares (50/50) gives 0.609 vs 0.601. This is a
-small, validation-tuned gain, so it is only a possible extension.
+features (0.669–0.671) beat k-NN (0.600) and come close to the neural network (0.687).
+
+The forest still matters for the final submission. Its errors differ from k-NN's, so averaging the class
+probabilities of k-NN, the neural network and the forest (`final/ensemble.ipynb`: soft voting, the same
+principle as inside the forest) raises image accuracy from 0.601 to **0.636**. The best weights are
+k-NN 0.35, NN 0.15, RF 0.50, so the forest gets the largest weight despite being the weakest model on its own.
+This gain holds when the weights are chosen on one half of the validation rows and measured on the other
+half: +3.9 and +3.2 points. On sentiment the ensemble adds only 0.1 point (0.688 vs 0.687), because the
+network and the forest already agree on most rows.
 
 ## 4. Summary
 
@@ -175,6 +183,8 @@ small, validation-tuned gain, so it is only a possible extension.
 * Supervised dimensionality reduction (LDA) is what makes a tree competitive on sentiment (0.48 → 0.67).
 * The Random Forest beats a single tree on raw features by large margins (image ×3) by reducing variance.
   It benefits from many trees, unrestricted trees and few features per split.
+* As part of a soft-voting ensemble, the forest lifts image accuracy from 0.601 (k-NN alone) to 0.636,
+  because it makes different mistakes.
 * Implementation details mattered: zero-aware thresholds, and histogram split search that made 500-tree
   forests practical (one 50-tree forest previously took 19 min).
 

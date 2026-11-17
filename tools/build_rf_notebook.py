@@ -319,6 +319,22 @@ cells.append(code("""for task in TASKS:
     plt.figure(figsize=(6, 2.5)); plt.plot(np.sort(imp)[::-1]); plt.title(f"{task}: sorted feature importance")
     plt.xlabel("feature rank"); plt.ylabel("importance"); plt.grid(alpha=0.3); plt.show()"""))
 
+cells.append(md("""### Permutation importance (the method from Lab 5)
+
+Shuffle one feature's column in the validation set and measure the accuracy drop (3 repeats). This measures what the
+forest *needs* on unseen data, while impurity importance measures what it *used* while training. For image we test the
+20 features with the highest impurity importance (each test needs 500-tree predictions)."""))
+cells.append(code("""for task in TASKS:
+    forest, A_tr, A_va = final_forests[task]
+    y_va = SPLIT[task][3]
+    imp = np.mean([t.feature_importance(A_tr.shape[1]) for t in forest.trees], axis=0)
+    candidates = np.argsort(imp)[::-1][:20]
+    start = time.time()
+    feats, drops = trees.permutation_importance(forest, A_va, y_va, candidates, n_repeats=3)
+    order = np.argsort(drops)[::-1]
+    print(f"{task}: accuracy drop when one feature is shuffled ({time.time() - start:.0f}s)")
+    print("   " + ", ".join(f"feature {feats[i]}: {drops[i]:+.4f}" for i in order[:10]))"""))
+
 cells.append(md("""## 8. Test predictions for Kaggle
 
 Selected settings, 500 trees, retrained on **all** training rows (LDA re-fitted on all training rows if used)."""))

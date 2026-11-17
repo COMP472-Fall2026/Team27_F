@@ -13,6 +13,7 @@ Contents:
     Binner                      candidate thresholds for every feature
     DecisionTree                CART-style classification tree
     RandomForest                bagged trees with random features per split
+    permutation_importance      accuracy drop when a feature is shuffled (Lab 5)
     fit_lda / apply_lda         Linear Discriminant Analysis projection
                                 (dimensionality reduction used as preprocessing)
 
@@ -409,7 +410,25 @@ class RandomForest:
 
 
 # ==========================================================================
-# 5. Linear Discriminant Analysis (dimensionality reduction)
+# 5. Permutation importance (as in Lab 5)
+# ==========================================================================
+def permutation_importance(model, X, y, features=None, n_repeats=3, seed=99):
+    """For each feature: shuffle its column, measure how much accuracy drops.
+    A big drop means the model relied on that feature.  Returns (features, mean drop)."""
+    rng = np.random.default_rng(seed)
+    features = np.arange(X.shape[1]) if features is None else np.asarray(features)
+    base = (model.predict(X) == y).mean()
+    drops = np.zeros(len(features))
+    for i, f in enumerate(features):
+        for _ in range(n_repeats):
+            Xp = X.copy()
+            Xp[:, f] = rng.permutation(Xp[:, f])
+            drops[i] += base - (model.predict(Xp) == y).mean()
+    return features, drops / n_repeats
+
+
+# ==========================================================================
+# 6. Linear Discriminant Analysis (dimensionality reduction)
 # ==========================================================================
 def fit_lda(X, y, n_classes, shrinkage=0.0):
     with np.errstate(all="ignore"):     # numpy 2.0 on macOS prints false matmul warnings

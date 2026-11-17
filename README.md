@@ -28,6 +28,7 @@ with NumPy; the Neural Network uses PyTorch (allowed by the project rules).
 | `neural_network/neural_network.ipynb` | Neural Network (PyTorch MLP) experiments: hidden layers/sizes, activation, learning rate, optimizer, batch size, dropout, preprocessing |
 | `clustering/clustering.ipynb` | k-Means clustering study (purity, ARI, NMI vs number of clusters) |
 | `final/compare.ipynb` | Reads every model's validation predictions → comparison table, error overlap between models, and one Kaggle file per (image model, sentiment model) pair ranked by validation score |
+| `final/ensemble.ipynb` | **Soft-voting ensemble**: averages the class probabilities of k-NN, Neural Network (5 seeds) and Random Forest with weights chosen on the validation split (with a held-out-half stability check) → `final/submissions/ensemble_soft_voting.csv` |
 | `final/summary.ipynb` | Read-only summary of the generated submission files |
 | `<model>/outputs/` | Saved experiment tables (`*_experiments.csv`), validation predictions (`*_val_pred.npy`) and test predictions (`*_test_pred.csv`) |
 | `final/submissions/` | Generated Kaggle files and `expected_scores.csv` |
@@ -68,11 +69,25 @@ always fitted on the training rows only.
    ```
    `random_forest.ipynb` reads the Decision Tree results for its comparison, so run it after `decision_tree.ipynb`.
 2. Run `clustering/clustering.ipynb` (independent of the others).
-3. Run `final/compare.ipynb` → `final/submissions/*.csv`; the first row of `expected_scores.csv` is the file
-   with the best validation score. Then `final/summary.ipynb`.
+3. Run `final/compare.ipynb` → `final/submissions/*.csv`; the first row of `expected_scores.csv` is the best
+   single-model pair. Then `final/summary.ipynb`.
+4. Run `final/ensemble.ipynb` (needs `random_forest.ipynb` to have run; ≈ 5 min) →
+   `final/submissions/ensemble_soft_voting.csv`, our final Kaggle file.
 
 Approximate run times on a laptop CPU: Decision Tree ≈ 17 min (it runs ~150 tree fits),
 Random Forest ≈ 20 min (multi-core).
+
+## Results (validation accuracy, same split for every model)
+
+| Method | Image | Sentiment |
+|---|---|---|
+| k-NN | 0.601 | 0.600 |
+| Decision Tree | 0.168 | 0.669 |
+| Random Forest | 0.369 | 0.671 |
+| Neural Network | 0.457 | 0.687 |
+| **Soft-voting ensemble (k-NN + NN + RF)** | **0.636** | **0.688** |
+
+Expected Kaggle score: best single models 0.644 → ensemble 0.662.
 
 ## Reproducibility
 
