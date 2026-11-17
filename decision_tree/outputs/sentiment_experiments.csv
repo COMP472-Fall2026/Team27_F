@@ -1,12 +1,90 @@
-task,settings,train_acc,val_acc,nodes,depth,seconds
-sentiment,{'max_depth': 5},0.5359,0.4854,63,5,2.1
-sentiment,"{'max_depth': 5, 'min_samples_leaf': 5}",0.5359,0.4854,63,5,5.5
-sentiment,"{'max_depth': 5, 'min_samples_leaf': 20}",0.5358,0.4854,63,5,5.0
-sentiment,{'max_depth': 8},0.6747,0.4833,473,8,2.9
-sentiment,"{'max_depth': 5, 'min_samples_leaf': 50}",0.5364,0.4796,63,5,4.2
-sentiment,"{'max_depth': 5, 'criterion': 'entropy'}",0.5246,0.4713,63,5,4.2
-sentiment,{'max_depth': 12},0.9279,0.4458,2169,12,5.6
-sentiment,{'max_depth': 2},0.4566,0.435,7,2,1.4
-sentiment,{'max_depth': 16},0.9899,0.4279,2833,16,6.5
-sentiment,{'max_depth': 20},0.9986,0.4271,2957,20,6.6
-sentiment,{'max_depth': None},1.0,0.4254,2987,24,6.8
+task,experiment,features,max_depth,min_samples_split,min_samples_leaf,criterion,n_bins,train_acc,val_acc,nodes,leaves,depth,seconds,shrinkage
+sentiment,lda,lda s=0.3,8.0,2,20,gini,64,0.7252,0.6692,339,170,8,0.01,0.3
+sentiment,lda,lda s=0.5,6.0,2,20,gini,64,0.7042,0.6687,127,64,6,0.0,0.5
+sentiment,lda,lda s=0.3,3.0,2,20,gini,64,0.7082,0.6683,15,8,3,0.0,0.3
+sentiment,lda,lda s=0.1,3.0,2,20,gini,64,0.7182,0.6683,15,8,3,0.0,0.1
+sentiment,lda,lda s=0.1,6.0,2,20,gini,64,0.7319,0.6675,119,60,6,0.0,0.1
+sentiment,lda,lda s=0.1,8.0,2,20,gini,64,0.7374,0.6658,325,163,8,0.01,0.1
+sentiment,lda,lda s=0.3,6.0,2,20,gini,64,0.7181,0.6654,119,60,6,0.0,0.3
+sentiment,lda,lda s=0.3,4.0,2,20,gini,64,0.7115,0.665,31,16,4,0.0,0.3
+sentiment,lda,lda s=0.5,3.0,2,20,gini,64,0.6909,0.665,15,8,3,0.0,0.5
+sentiment,lda,lda s=0.1,4.0,2,20,gini,64,0.7201,0.6637,31,16,4,0.0,0.1
+sentiment,lda,lda s=0.3,,2,20,gini,64,0.7299,0.6633,673,337,15,0.01,0.3
+sentiment,lda,lda s=0.5,4.0,2,20,gini,64,0.6932,0.6629,31,16,4,0.0,0.5
+sentiment,lda,lda s=0.3,2.0,2,20,gini,64,0.7064,0.6625,7,4,2,0.0,0.3
+sentiment,lda,lda s=0.1,2.0,2,20,gini,64,0.7164,0.6596,7,4,2,0.0,0.1
+sentiment,lda,lda s=0.5,8.0,2,20,gini,64,0.7106,0.6596,345,173,8,0.01,0.5
+sentiment,lda,lda s=0.1,,2,20,gini,64,0.7415,0.6575,661,331,15,0.02,0.1
+sentiment,lda,lda s=0.5,,2,20,gini,64,0.7147,0.6546,681,341,15,0.02,0.5
+sentiment,lda,lda s=0.5,2.0,2,20,gini,64,0.6865,0.6529,7,4,2,0.0,0.5
+sentiment,lda,lda s=0.0,6.0,2,20,gini,64,0.7425,0.6529,123,62,6,0.0,0.0
+sentiment,lda,lda s=0.8,6.0,2,20,gini,64,0.6791,0.6529,117,59,6,0.0,0.8
+sentiment,lda,lda s=0.0,8.0,2,20,gini,64,0.7484,0.6517,335,168,8,0.01,0.0
+sentiment,lda,lda s=0.8,3.0,2,20,gini,64,0.6747,0.6512,15,8,3,0.0,0.8
+sentiment,lda,lda s=0.8,4.0,2,20,gini,64,0.6747,0.6512,31,16,4,0.0,0.8
+sentiment,lda,lda s=0.8,8.0,2,20,gini,64,0.6869,0.6508,343,172,8,0.01,0.8
+sentiment,lda,lda s=0.0,,2,20,gini,64,0.7501,0.6475,665,333,15,0.01,0.0
+sentiment,lda,lda s=0.8,2.0,2,20,gini,64,0.6715,0.6471,7,4,2,0.0,0.8
+sentiment,lda,lda s=0.8,,2,20,gini,64,0.695,0.6412,685,343,14,0.02,0.8
+sentiment,lda,lda s=0.0,4.0,2,20,gini,64,0.7327,0.6396,31,16,4,0.0,0.0
+sentiment,lda,lda s=0.0,3.0,2,20,gini,64,0.7295,0.6346,15,8,3,0.0,0.0
+sentiment,lda,lda s=0.0,2.0,2,20,gini,64,0.7139,0.6129,7,4,2,0.0,0.0
+sentiment,criterion,raw,,2,100,entropy,64,0.5609,0.4929,151,76,10,0.8,
+sentiment,n_bins,raw,,2,100,gini,64,0.5757,0.4921,147,74,8,0.81,
+sentiment,depth x leaf,raw,8.0,2,100,gini,64,0.5757,0.4921,147,74,8,0.74,
+sentiment,min_samples_leaf,raw,,2,100,gini,64,0.5757,0.4921,147,74,8,0.74,
+sentiment,depth x leaf,raw,,2,100,gini,64,0.5757,0.4921,147,74,8,0.75,
+sentiment,criterion,raw,,2,100,gini,64,0.5757,0.4921,147,74,8,0.74,
+sentiment,depth x leaf,raw,8.0,2,50,gini,64,0.6118,0.4917,253,127,8,0.88,
+sentiment,n_bins,raw,,2,100,gini,128,0.5736,0.4908,141,71,9,0.95,
+sentiment,min_samples_leaf,raw,,2,50,gini,64,0.6182,0.4892,297,149,12,0.93,
+sentiment,depth x leaf,raw,,2,50,gini,64,0.6182,0.4892,297,149,12,0.92,
+sentiment,depth x leaf,raw,8.0,2,20,gini,64,0.6536,0.4879,351,176,8,1.0,
+sentiment,depth x leaf,raw,6.0,2,100,gini,64,0.5618,0.4858,99,50,6,0.67,
+sentiment,depth x leaf,raw,6.0,2,20,gini,64,0.5768,0.485,125,63,6,0.7,
+sentiment,depth x leaf,raw,6.0,2,1,gini,64,0.5773,0.4833,127,64,6,0.71,
+sentiment,criterion,raw,6.0,2,1,gini,64,0.5773,0.4833,127,64,6,0.71,
+sentiment,depth x leaf,raw,6.0,2,50,gini,64,0.5678,0.4833,119,60,6,0.72,
+sentiment,max_depth,raw,6.0,2,1,gini,64,0.5773,0.4833,127,64,6,0.76,
+sentiment,criterion,raw,6.0,2,1,entropy,64,0.5609,0.4833,125,63,6,0.74,
+sentiment,depth x leaf,raw,6.0,2,10,gini,64,0.577,0.4821,127,64,6,0.71,
+sentiment,n_bins,raw,,2,100,gini,8,0.5579,0.4817,141,71,8,0.47,
+sentiment,depth x leaf,raw,4.0,2,20,gini,64,0.5231,0.4817,31,16,4,0.56,
+sentiment,depth x leaf,raw,4.0,2,10,gini,64,0.5231,0.4817,31,16,4,0.55,
+sentiment,depth x leaf,raw,4.0,2,50,gini,64,0.5231,0.4817,31,16,4,0.55,
+sentiment,max_depth,raw,4.0,2,1,gini,64,0.5231,0.4817,31,16,4,0.6,
+sentiment,depth x leaf,raw,4.0,2,1,gini,64,0.5231,0.4817,31,16,4,0.56,
+sentiment,depth x leaf,raw,4.0,2,100,gini,64,0.5235,0.4813,31,16,4,0.56,
+sentiment,depth x leaf,raw,8.0,2,10,gini,64,0.6686,0.4808,411,206,8,1.05,
+sentiment,max_depth,raw,8.0,2,1,gini,64,0.6845,0.4808,479,240,8,1.2,
+sentiment,depth x leaf,raw,8.0,2,1,gini,64,0.6845,0.4808,479,240,8,1.12,
+sentiment,depth x leaf,raw,5.0,2,100,gini,64,0.5443,0.48,59,30,5,0.61,
+sentiment,depth x leaf,raw,5.0,2,50,gini,64,0.5454,0.4767,61,31,5,0.62,
+sentiment,depth x leaf,raw,5.0,2,10,gini,64,0.5466,0.4763,63,32,5,0.62,
+sentiment,depth x leaf,raw,5.0,2,20,gini,64,0.5466,0.4763,63,32,5,0.62,
+sentiment,depth x leaf,raw,5.0,2,1,gini,64,0.5466,0.4763,63,32,5,0.62,
+sentiment,min_samples_leaf,raw,,2,20,gini,64,0.711,0.475,701,351,15,1.4,
+sentiment,depth x leaf,raw,,2,20,gini,64,0.711,0.475,701,351,15,1.4,
+sentiment,n_bins,raw,,2,100,gini,32,0.5724,0.4746,147,74,9,0.65,
+sentiment,min_samples_split,raw,,400,1,gini,64,0.5506,0.4742,95,48,9,0.67,
+sentiment,min_samples_split,raw,,200,1,gini,64,0.5969,0.4742,245,123,25,0.87,
+sentiment,n_bins,raw,,2,100,gini,16,0.572,0.4725,149,75,9,0.55,
+sentiment,n_bins,raw,,2,100,gini,256,0.5786,0.4708,145,73,9,1.32,
+sentiment,min_samples_split,raw,,100,1,gini,64,0.6664,0.4592,539,270,28,1.23,
+sentiment,max_depth,raw,10.0,2,1,gini,64,0.8215,0.4537,1259,630,10,2.1,
+sentiment,depth x leaf,raw,,2,10,gini,64,0.7929,0.4521,1211,606,17,1.98,
+sentiment,min_samples_leaf,raw,,2,10,gini,64,0.7929,0.4521,1211,606,17,2.0,
+sentiment,max_depth,raw,12.0,2,1,gini,64,0.926,0.4404,2059,1030,12,3.02,
+sentiment,min_samples_leaf,raw,,2,5,gini,64,0.8815,0.4383,1879,940,21,2.74,
+sentiment,max_depth,raw,2.0,2,1,gini,64,0.457,0.4354,7,4,2,0.53,
+sentiment,max_depth,raw,15.0,2,1,gini,64,0.9867,0.4321,2729,1365,15,3.77,
+sentiment,min_samples_leaf,raw,,2,2,gini,64,0.9582,0.4308,2603,1302,25,3.52,
+sentiment,min_samples_split,raw,,50,1,gini,64,0.753,0.4304,951,476,28,1.69,
+sentiment,max_depth,raw,20.0,2,1,gini,64,0.9964,0.4288,2879,1440,20,3.98,
+sentiment,min_samples_split,raw,,2,1,gini,64,1.0,0.4279,2963,1482,29,3.87,
+sentiment,max_depth,raw,,2,1,gini,64,1.0,0.4279,2963,1482,29,4.09,
+sentiment,max_depth,raw,30.0,2,1,gini,64,1.0,0.4279,2963,1482,29,4.12,
+sentiment,depth x leaf,raw,,2,1,gini,64,1.0,0.4279,2963,1482,29,3.93,
+sentiment,min_samples_leaf,raw,,2,1,gini,64,1.0,0.4279,2963,1482,29,3.91,
+sentiment,min_samples_split,raw,,10,1,gini,64,0.9391,0.425,2091,1046,28,2.94,
+sentiment,min_samples_split,raw,,25,1,gini,64,0.8471,0.4204,1451,726,28,2.26,

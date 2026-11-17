@@ -1,11 +1,37 @@
-task,n_trees,max_features,max_depth,val_acc
-image,50,sqrt,None,0.2385
-image,25,sqrt,None,0.1908
-image,20,50,None,0.1878
-image,20,sqrt,None,0.1775
-image,20,sqrt,20,0.1618
-image,20,log2,None,0.1517
-image,10,sqrt,None,0.1365
-image,20,sqrt,10,0.115
-image,5,sqrt,None,0.0993
-image,1,sqrt,None,0.0747
+task,experiment,features,n_trees,max_features,max_depth,min_samples_leaf,criterion,bootstrap_fraction,voting,train_acc,val_acc,seconds
+image,n_trees,raw,500,sqrt,,1,gini,1.0,soft,1.0,0.3688,
+image,n_trees,raw,300,sqrt,,1,gini,1.0,soft,1.0,0.3485,
+image,min_samples_leaf,raw,200,sqrt,,2,gini,1.0,soft,1.0,0.335,45.2
+image,max_features,raw,200,sqrt,,1,gini,1.0,soft,1.0,0.3307,55.1
+image,n_trees,raw,200,sqrt,,1,gini,1.0,soft,1.0,0.3307,
+image,max_depth,raw,200,sqrt,,1,gini,1.0,soft,1.0,0.3307,59.1
+image,voting,raw,200,sqrt,,1,gini,1.0,hard,1.0,0.3302,58.2
+image,max_features,raw,200,10,,1,gini,1.0,soft,1.0,0.33,28.3
+image,max_features,raw,200,5,,1,gini,1.0,soft,1.0,0.329,16.4
+image,max_features,raw,200,50,,1,gini,1.0,soft,1.0,0.3255,127.8
+image,min_samples_leaf,raw,200,sqrt,,5,gini,1.0,soft,0.9985,0.321,21.6
+image,representation,raw+lda s=0.5,200,sqrt,,1,gini,1.0,soft,1.0,0.3137,52.2
+image,criterion,raw,200,sqrt,,1,entropy,1.0,soft,1.0,0.3137,132.7
+image,max_features,raw,200,3,,1,gini,1.0,soft,1.0,0.3125,11.4
+image,max_features,raw,200,100,,1,gini,1.0,soft,1.0,0.3113,267.7
+image,representation,raw+lda s=0.1,200,sqrt,,1,gini,1.0,soft,1.0,0.307,55.3
+image,representation,raw+lda s=0.3,200,sqrt,,1,gini,1.0,soft,1.0,0.3043,52.7
+image,bootstrap_fraction,raw,200,sqrt,,1,gini,0.5,soft,1.0,0.2985,37.2
+image,n_trees,raw,100,sqrt,,1,gini,1.0,soft,1.0,0.2923,
+image,representation,lda s=0.3,200,7,,1,gini,1.0,soft,1.0,0.2885,17.2
+image,min_samples_leaf,raw,200,sqrt,,10,gini,1.0,soft,0.9875,0.2885,11.4
+image,representation,lda s=0.5,200,7,,1,gini,1.0,soft,1.0,0.2883,16.7
+image,representation,lda s=0.1,200,7,,1,gini,1.0,soft,1.0,0.2775,18.6
+image,representation,lda s=0.5,200,7,,20,gini,1.0,soft,0.871,0.2767,2.5
+image,representation,lda s=0.3,200,7,,20,gini,1.0,soft,0.869,0.2755,2.5
+image,bootstrap_fraction,raw,200,sqrt,,1,gini,0.25,soft,0.999,0.269,21.0
+image,representation,lda s=0.1,200,7,,20,gini,1.0,soft,0.8755,0.2662,2.6
+image,max_depth,raw,200,sqrt,20.0,1,gini,1.0,soft,0.991,0.2537,9.9
+image,n_trees,raw,50,sqrt,,1,gini,1.0,soft,1.0,0.2482,
+image,n_trees,raw,25,sqrt,,1,gini,1.0,soft,1.0,0.2047,
+image,max_depth,raw,200,sqrt,10.0,1,gini,1.0,soft,0.63,0.19,2.7
+image,max_depth,raw,200,sqrt,5.0,1,gini,1.0,soft,0.242,0.149,1.6
+image,n_trees,raw,10,sqrt,,1,gini,1.0,soft,0.9975,0.1417,
+image,n_trees,raw,5,sqrt,,1,gini,1.0,soft,0.9535,0.106,
+image,n_trees,raw,1,sqrt,,1,gini,1.0,soft,0.6545,0.087,
+image,n_trees,raw,2,sqrt,,1,gini,1.0,soft,0.6445,0.0867,

@@ -1,12 +1,75 @@
-task,settings,train_acc,val_acc,nodes,depth,seconds
-image,"{'max_depth': None, 'min_samples_leaf': 50}",0.1733,0.1192,471,42,51.4
-image,{'max_depth': None},1.0,0.1128,18917,89,759.2
-image,"{'max_depth': None, 'min_samples_leaf': 20}",0.2521,0.1103,1223,49,117.6
-image,"{'max_depth': None, 'min_samples_leaf': 5}",0.4938,0.1057,5119,71,233.4
-image,{'max_depth': 20},0.3156,0.1045,3681,20,117.1
-image,"{'max_depth': None, 'criterion': 'entropy'}",1.0,0.1045,19331,48,1360.6
-image,{'max_depth': 16},0.2282,0.0998,2089,16,50.5
-image,{'max_depth': 12},0.1512,0.0848,929,12,12.8
-image,{'max_depth': 8},0.0956,0.0712,307,8,5.5
-image,{'max_depth': 5},0.0654,0.0633,63,5,2.2
-image,{'max_depth': 2},0.0395,0.041,7,2,0.9
+task,experiment,features,max_depth,min_samples_split,min_samples_leaf,criterion,n_bins,train_acc,val_acc,nodes,leaves,depth,seconds,shrinkage
+image,lda,lda s=0.5,,2,20,gini,64,0.3412,0.1678,1217,609,25,0.53,0.5
+image,lda,lda s=0.3,,2,20,gini,64,0.3431,0.1648,1199,600,30,0.53,0.3
+image,lda,lda s=0.5,20.0,2,20,gini,64,0.3177,0.1645,1025,513,20,0.46,0.5
+image,lda,lda s=0.3,20.0,2,20,gini,64,0.3258,0.1638,1049,525,20,0.48,0.3
+image,lda,lda s=0.5,15.0,2,20,gini,64,0.2526,0.1638,585,293,15,0.29,0.5
+image,lda,lda s=0.0,,2,20,gini,64,0.3536,0.1633,1207,604,25,0.54,0.0
+image,lda,lda s=0.1,15.0,2,20,gini,64,0.2624,0.162,575,288,15,0.3,0.1
+image,lda,lda s=0.0,20.0,2,20,gini,64,0.3393,0.162,1091,546,20,0.49,0.0
+image,lda,lda s=0.3,15.0,2,20,gini,64,0.2586,0.1615,581,291,15,0.3,0.3
+image,lda,lda s=0.0,15.0,2,20,gini,64,0.2643,0.161,539,270,15,0.28,0.0
+image,lda,lda s=0.1,,2,20,gini,64,0.3478,0.1593,1205,603,27,0.55,0.1
+image,lda,lda s=0.1,20.0,2,20,gini,64,0.3346,0.159,1097,549,20,0.51,0.1
+image,lda,lda s=0.8,20.0,2,20,gini,64,0.3146,0.159,1107,554,20,0.49,0.8
+image,lda,lda s=0.8,,2,20,gini,64,0.3252,0.1588,1201,601,23,0.53,0.8
+image,lda,lda s=0.8,15.0,2,20,gini,64,0.2527,0.1547,643,322,15,0.32,0.8
+image,lda,lda s=0.5,10.0,2,20,gini,64,0.1701,0.1425,173,87,10,0.13,0.5
+image,lda,lda s=0.1,10.0,2,20,gini,64,0.1749,0.14,181,91,10,0.14,0.1
+image,lda,lda s=0.0,10.0,2,20,gini,64,0.18,0.139,179,90,10,0.14,0.0
+image,lda,lda s=0.3,10.0,2,20,gini,64,0.1731,0.1378,185,93,10,0.15,0.3
+image,lda,lda s=0.8,10.0,2,20,gini,64,0.1656,0.137,167,84,10,0.13,0.8
+image,min_samples_split,raw,,25,1,gini,64,0.5234,0.1355,4639,2320,120,17.9,
+image,n_bins,raw,,2,10,gini,64,0.3726,0.1335,2543,1272,78,10.45,
+image,depth x leaf,raw,,2,10,gini,64,0.3726,0.1335,2543,1272,78,10.74,
+image,min_samples_split,raw,,50,1,gini,64,0.4069,0.1335,2897,1449,113,11.57,
+image,min_samples_leaf,raw,,2,10,gini,64,0.3726,0.1335,2543,1272,78,10.02,
+image,criterion,raw,,2,10,gini,64,0.3726,0.1335,2543,1272,78,10.14,
+image,min_samples_split,raw,,200,1,gini,64,0.2341,0.1303,823,412,84,4.0,
+image,min_samples_split,raw,,10,1,gini,64,0.6636,0.1283,7569,3785,125,28.63,
+image,min_samples_leaf,raw,,2,5,gini,64,0.5241,0.128,5097,2549,105,19.35,
+image,depth x leaf,raw,,2,5,gini,64,0.5241,0.128,5097,2549,105,20.11,
+image,n_bins,raw,,2,10,gini,32,0.3726,0.1273,2569,1285,74,5.39,
+image,min_samples_split,raw,,2,1,gini,64,1.0,0.1258,17801,8901,129,65.61,
+image,depth x leaf,raw,,2,1,gini,64,1.0,0.1258,17801,8901,129,66.0,
+image,max_depth,raw,,2,1,gini,64,1.0,0.1258,17801,8901,129,64.95,
+image,criterion,raw,,2,1,gini,64,1.0,0.1258,17801,8901,129,65.19,
+image,min_samples_leaf,raw,,2,1,gini,64,1.0,0.1258,17801,8901,129,66.26,
+image,min_samples_split,raw,,400,1,gini,64,0.1889,0.1255,443,222,71,2.48,
+image,min_samples_split,raw,,100,1,gini,64,0.3077,0.1253,1589,795,99,6.83,
+image,depth x leaf,raw,30.0,2,10,gini,64,0.2402,0.1215,1215,608,30,5.1,
+image,min_samples_leaf,raw,,2,20,gini,64,0.2699,0.1207,1247,624,67,5.34,
+image,depth x leaf,raw,,2,20,gini,64,0.2699,0.1207,1247,624,67,5.71,
+image,n_bins,raw,,2,10,gini,8,0.3571,0.1192,2469,1235,71,2.01,
+image,depth x leaf,raw,30.0,2,5,gini,64,0.2787,0.119,1979,990,30,7.84,
+image,min_samples_leaf,raw,,2,2,gini,64,0.7806,0.1187,11913,5957,126,44.81,
+image,min_samples_leaf,raw,,2,50,gini,64,0.1916,0.118,505,253,53,2.55,
+image,depth x leaf,raw,,2,50,gini,64,0.1916,0.118,505,253,53,2.74,
+image,n_bins,raw,,2,10,gini,256,0.3741,0.1175,2553,1277,80,41.95,
+image,min_samples_leaf,raw,,2,100,gini,64,0.1563,0.116,245,123,42,1.55,
+image,depth x leaf,raw,30.0,2,20,gini,64,0.2087,0.114,761,381,30,3.48,
+image,n_bins,raw,,2,10,gini,128,0.3779,0.114,2569,1285,78,21.22,
+image,max_depth,raw,30.0,2,1,gini,64,0.3666,0.1138,4339,2170,30,16.73,
+image,n_bins,raw,,2,10,gini,16,0.3648,0.1138,2527,1264,75,3.05,
+image,depth x leaf,raw,30.0,2,1,gini,64,0.3666,0.1138,4339,2170,30,16.26,
+image,depth x leaf,raw,30.0,2,50,gini,64,0.1737,0.1125,397,199,30,2.12,
+image,depth x leaf,raw,20.0,2,10,gini,64,0.1624,0.1087,575,288,20,2.7,
+image,depth x leaf,raw,20.0,2,5,gini,64,0.1766,0.108,847,424,20,3.66,
+image,depth x leaf,raw,20.0,2,20,gini,64,0.151,0.1075,385,193,20,1.99,
+image,depth x leaf,raw,20.0,2,50,gini,64,0.1358,0.1052,213,107,20,1.35,
+image,depth x leaf,raw,20.0,2,1,gini,64,0.2118,0.1037,1685,843,20,6.68,
+image,max_depth,raw,20.0,2,1,gini,64,0.2118,0.1037,1685,843,20,7.21,
+image,criterion,raw,,2,10,entropy,64,0.3094,0.0993,2449,1225,39,19.93,
+image,criterion,raw,,2,1,entropy,64,1.0,0.0988,18869,9435,47,149.43,
+image,depth x leaf,raw,15.0,2,10,gini,64,0.1229,0.0943,325,163,15,1.68,
+image,depth x leaf,raw,15.0,2,20,gini,64,0.1164,0.0917,229,115,15,1.33,
+image,depth x leaf,raw,15.0,2,50,gini,64,0.1091,0.091,123,62,15,0.96,
+image,depth x leaf,raw,15.0,2,5,gini,64,0.1303,0.0902,463,232,15,2.17,
+image,depth x leaf,raw,15.0,2,1,gini,64,0.1451,0.0895,771,386,15,3.28,
+image,max_depth,raw,15.0,2,1,gini,64,0.1451,0.0895,771,386,15,3.58,
+image,max_depth,raw,12.0,2,1,gini,64,0.1139,0.0793,421,211,12,2.14,
+image,max_depth,raw,10.0,2,1,gini,64,0.0994,0.0765,277,139,10,1.56,
+image,max_depth,raw,8.0,2,1,gini,64,0.0808,0.0675,191,96,8,1.19,
+image,max_depth,raw,6.0,2,1,gini,64,0.0649,0.0575,97,49,6,0.74,
+image,max_depth,raw,4.0,2,1,gini,64,0.0501,0.0483,31,16,4,0.42,
+image,max_depth,raw,2.0,2,1,gini,64,0.0349,0.0355,7,4,2,0.3,
