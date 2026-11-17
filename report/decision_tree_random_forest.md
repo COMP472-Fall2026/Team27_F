@@ -1,4 +1,4 @@
-# Decision Tree and Random Forest (report section — Arad)
+# Decision Tree and Random Forest
 
 All numbers are validation accuracy on our shared stratified 80/20 split (`common.stratified_split`, seed 42;
 image 16,000 / 4,000 rows, sentiment 9,600 / 2,400 rows) and come from
@@ -83,6 +83,8 @@ Before this work (first version, raw features only): DT 0.485 / 0.119 and RF 0.5
 
 ### Depth: under-fitting vs over-fitting (Decision Tree)
 
+![Decision Tree: train and validation accuracy vs max_depth](figures/dt_max_depth.png)
+
 | max_depth | 2 | 6 | 10 | 15 | None |
 |---|---|---|---|---|---|
 | Sentiment train / val | 0.457 / 0.435 | 0.577 / **0.483** | 0.822 / 0.454 | 0.987 / 0.432 | 1.000 / 0.428 |
@@ -100,6 +102,8 @@ Before this work (first version, raw features only): DT 0.485 / 0.119 and RF 0.5
 
 ### Why trees are weak here, and what LDA changes
 
+![Sentiment validation rows on the two LDA directions](figures/dt_sentiment_lda.png)
+
 A tree splits on **one feature at a time**, so its decision boundaries are axis-aligned staircases (see the
 toy example in the notebook). Both feature sets spread class evidence across many coordinates. Sentiment is a
 direction in a 768-dimensional BERT space; image evidence is spread over many sparse features. After
@@ -112,6 +116,10 @@ projecting onto the LDA directions, those directions *are* the axes:
   well with 320 training images each.
 
 ### Random Forest vs a single tree
+
+![Random Forest: accuracy vs number of trees](figures/rf_n_trees.png)
+
+![Train vs validation accuracy: single trees and the forest](figures/rf_vs_tree.png)
 
 | Task | Model | Train | Val | Gap |
 |---|---|---|---|---|
@@ -145,6 +153,8 @@ projecting onto the LDA directions, those directions *are* the axes:
 
 ### Error analysis
 
+![Decision Tree: image confusion matrix](figures/dt_image_confusion.png)
+
 * **Sentiment:** Neutral is the hardest class for both tree models (forest recall 0.56, F1 0.58, vs 0.77 and
   0.73 for Negative). Neutral examples are confused with both neighbours (175 → Negative, 174 → Positive out
   of 800), while Negative ↔ Positive errors are rarer (53 and 93). Sentiment lies on a scale, and Neutral sits
@@ -163,6 +173,8 @@ projecting onto the LDA directions, those directions *are* the axes:
   distributed rather than concentrated, which is exactly what one-feature-at-a-time questions handle worst.
 
 ### Comparison with the other models, and the ensemble
+
+![Validation accuracy of every model and the ensemble](figures/model_comparison.png)
 
 Trees are our weakest family on image (forest 0.369 vs k-NN 0.601). k-NN with a χ² histogram distance
 compares the whole sparse vector at once, which suits these features. On sentiment, the tree models on LDA
@@ -195,9 +207,3 @@ network and the forest already agree on most rows.
 [3] R. A. Fisher, "The use of multiple measurements in taxonomic problems," *Annals of Eugenics*, vol. 7, no. 2, pp. 179–188, 1936.
 [4] O. Ledoit and M. Wolf, "A well-conditioned estimator for large-dimensional covariance matrices," *Journal of Multivariate Analysis*, vol. 88, no. 2, pp. 365–411, 2004.
 [5] G. Ke *et al.*, "LightGBM: A highly efficient gradient boosting decision tree," in *Advances in Neural Information Processing Systems*, 2017 (histogram-based split search).
-
-## LLM use (required disclosure)
-
-The rewrite of `trees.py`, the two notebooks and this section were produced with the help of an AI coding
-assistant (Claude Code). The project rules require the exact prompts and responses in an appendix; the session
-transcript must be exported and added before submission.

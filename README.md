@@ -32,7 +32,7 @@ with NumPy; the Neural Network uses PyTorch (allowed by the project rules).
 | `final/summary.ipynb` | Read-only summary of the generated submission files |
 | `<model>/outputs/` | Saved experiment tables (`*_experiments.csv`), validation predictions (`*_val_pred.npy`) and test predictions (`*_test_pred.csv`) |
 | `final/submissions/` | Generated Kaggle files and `expected_scores.csv` |
-| `tools/build_*_notebook.py` | Scripts that generate the Decision Tree / Random Forest notebooks (the notebooks themselves are the deliverable) |
+| `report/` | Report section for Decision Tree / Random Forest and the figures used in the report (`report/figures/`) |
 | `requirements.txt` | Library versions we used |
 
 ## Setup
