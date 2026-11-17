@@ -1,0 +1,5 @@
+Method,image accuracy,sentiment accuracy
+k-NN,0.6008,0.6
+Decision Tree,0.1192,0.4854
+Random Forest,,0.5725
+Neural Network,0.4567,0.6867

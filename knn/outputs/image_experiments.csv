@@ -1,133 +1,97 @@
-task,preprocess,distance,weighting,k,val_acc,neighbour_search_seconds
-image,none,euclidean,uniform,1,0.5192,6.9
-image,none,euclidean,uniform,3,0.4248,6.9
-image,none,euclidean,uniform,5,0.4238,6.9
-image,none,euclidean,uniform,10,0.393,6.9
-image,none,euclidean,uniform,20,0.359,6.9
-image,none,euclidean,uniform,50,0.307,6.9
-image,none,manhattan,uniform,1,0.4045,131.5
-image,none,manhattan,uniform,3,0.319,131.5
-image,none,manhattan,uniform,5,0.2802,131.5
-image,none,manhattan,uniform,10,0.245,131.5
-image,none,manhattan,uniform,20,0.2072,131.5
-image,none,manhattan,uniform,50,0.1673,131.5
-image,none,cosine,uniform,1,0.5192,8.5
-image,none,cosine,uniform,3,0.4245,8.5
-image,none,cosine,uniform,5,0.4235,8.5
-image,none,cosine,uniform,10,0.3927,8.5
-image,none,cosine,uniform,20,0.359,8.5
-image,none,cosine,uniform,50,0.3063,8.5
-image,none,chi_squared,uniform,1,0.579,399.5
-image,none,chi_squared,uniform,3,0.4708,399.5
-image,none,chi_squared,uniform,5,0.4695,399.5
-image,none,chi_squared,uniform,10,0.4495,399.5
-image,none,chi_squared,uniform,20,0.4093,399.5
-image,none,chi_squared,uniform,50,0.355,399.5
-image,none,euclidean,uniform,1,0.5192,6.9
-image,none,euclidean,uniform,3,0.4248,6.9
-image,none,euclidean,uniform,5,0.4238,6.9
-image,none,euclidean,uniform,10,0.393,6.9
-image,none,euclidean,uniform,20,0.359,6.9
-image,none,euclidean,uniform,50,0.307,6.9
-image,none,cosine,uniform,1,0.5192,8.5
-image,none,cosine,uniform,3,0.4245,8.5
-image,none,cosine,uniform,5,0.4235,8.5
-image,none,cosine,uniform,10,0.3927,8.5
-image,none,cosine,uniform,20,0.359,8.5
-image,none,cosine,uniform,50,0.3063,8.5
-image,standardize,euclidean,uniform,1,0.43,5.4
-image,standardize,euclidean,uniform,3,0.3498,5.4
-image,standardize,euclidean,uniform,5,0.33,5.4
-image,standardize,euclidean,uniform,10,0.3023,5.4
-image,standardize,euclidean,uniform,20,0.2612,5.4
-image,standardize,euclidean,uniform,50,0.2175,5.4
-image,standardize,cosine,uniform,1,0.5333,5.0
-image,standardize,cosine,uniform,3,0.4215,5.0
-image,standardize,cosine,uniform,5,0.4213,5.0
-image,standardize,cosine,uniform,10,0.396,5.0
-image,standardize,cosine,uniform,20,0.3792,5.0
-image,standardize,cosine,uniform,50,0.3335,5.0
-image,sqrt,euclidean,uniform,1,0.563,6.0
-image,sqrt,euclidean,uniform,3,0.4637,6.0
-image,sqrt,euclidean,uniform,5,0.4535,6.0
-image,sqrt,euclidean,uniform,10,0.4338,6.0
-image,sqrt,euclidean,uniform,20,0.388,6.0
-image,sqrt,euclidean,uniform,50,0.333,6.0
-image,sqrt,cosine,uniform,1,0.5627,14.2
-image,sqrt,cosine,uniform,3,0.4637,14.2
-image,sqrt,cosine,uniform,5,0.4535,14.2
-image,sqrt,cosine,uniform,10,0.4338,14.2
-image,sqrt,cosine,uniform,20,0.3882,14.2
-image,sqrt,cosine,uniform,50,0.333,14.2
-image,sqrt,cosine,uniform,1,0.5627,14.2
-image,sqrt,cosine,uniform,3,0.4637,14.2
-image,sqrt,cosine,uniform,5,0.4535,14.2
-image,sqrt,cosine,uniform,10,0.4338,14.2
-image,sqrt,cosine,uniform,20,0.3882,14.2
-image,sqrt,cosine,uniform,50,0.333,14.2
-image,sqrt,cosine,1/d^2,1,0.5627,14.2
-image,sqrt,cosine,1/d^2,3,0.5575,14.2
-image,sqrt,cosine,1/d^2,5,0.5413,14.2
-image,sqrt,cosine,1/d^2,10,0.5005,14.2
-image,sqrt,cosine,1/d^2,20,0.4688,14.2
-image,sqrt,cosine,1/d^2,50,0.4047,14.2
-image,sqrt,cosine,1/d^8,1,0.5627,14.2
-image,sqrt,cosine,1/d^8,3,0.567,14.2
-image,sqrt,cosine,1/d^8,5,0.5693,14.2
-image,sqrt,cosine,1/d^8,10,0.5635,14.2
-image,sqrt,cosine,1/d^8,20,0.5603,14.2
-image,sqrt,cosine,1/d^8,50,0.5445,14.2
-image,sqrt,cosine,kernel tau=0.01,1,0.5627,14.2
-image,sqrt,cosine,kernel tau=0.01,3,0.566,14.2
-image,sqrt,cosine,kernel tau=0.01,5,0.5667,14.2
-image,sqrt,cosine,kernel tau=0.01,10,0.5683,14.2
-image,sqrt,cosine,kernel tau=0.01,20,0.569,14.2
-image,sqrt,cosine,kernel tau=0.01,50,0.569,14.2
-image,sqrt,cosine,kernel tau=0.02,1,0.5627,14.2
-image,sqrt,cosine,kernel tau=0.02,3,0.5683,14.2
-image,sqrt,cosine,kernel tau=0.02,5,0.5707,14.2
-image,sqrt,cosine,kernel tau=0.02,10,0.574,14.2
-image,sqrt,cosine,kernel tau=0.02,20,0.5763,14.2
-image,sqrt,cosine,kernel tau=0.02,50,0.579,14.2
-image,sqrt,cosine,kernel tau=0.05,1,0.5627,14.2
-image,sqrt,cosine,kernel tau=0.05,3,0.569,14.2
-image,sqrt,cosine,kernel tau=0.05,5,0.571,14.2
-image,sqrt,cosine,kernel tau=0.05,10,0.5693,14.2
-image,sqrt,cosine,kernel tau=0.05,20,0.5735,14.2
-image,sqrt,cosine,kernel tau=0.05,50,0.5755,14.2
-image,none,chi_squared,uniform,1,0.579,399.5
-image,none,chi_squared,uniform,3,0.4708,399.5
-image,none,chi_squared,uniform,5,0.4695,399.5
-image,none,chi_squared,uniform,10,0.4495,399.5
-image,none,chi_squared,uniform,20,0.4093,399.5
-image,none,chi_squared,uniform,50,0.355,399.5
-image,none,chi_squared,1/d^2,1,0.579,399.5
-image,none,chi_squared,1/d^2,3,0.5743,399.5
-image,none,chi_squared,1/d^2,5,0.5575,399.5
-image,none,chi_squared,1/d^2,10,0.521,399.5
-image,none,chi_squared,1/d^2,20,0.4853,399.5
-image,none,chi_squared,1/d^2,50,0.4175,399.5
-image,none,chi_squared,1/d^8,1,0.579,399.5
-image,none,chi_squared,1/d^8,3,0.584,399.5
-image,none,chi_squared,1/d^8,5,0.5873,399.5
-image,none,chi_squared,1/d^8,10,0.5813,399.5
-image,none,chi_squared,1/d^8,20,0.5755,399.5
-image,none,chi_squared,1/d^8,50,0.56,399.5
-image,none,chi_squared,kernel tau=0.01,1,0.579,399.5
-image,none,chi_squared,kernel tau=0.01,3,0.5817,399.5
-image,none,chi_squared,kernel tau=0.01,5,0.5845,399.5
-image,none,chi_squared,kernel tau=0.01,10,0.5847,399.5
-image,none,chi_squared,kernel tau=0.01,20,0.585,399.5
-image,none,chi_squared,kernel tau=0.01,50,0.5845,399.5
-image,none,chi_squared,kernel tau=0.02,1,0.579,399.5
-image,none,chi_squared,kernel tau=0.02,3,0.585,399.5
-image,none,chi_squared,kernel tau=0.02,5,0.589,399.5
-image,none,chi_squared,kernel tau=0.02,10,0.5913,399.5
-image,none,chi_squared,kernel tau=0.02,20,0.5935,399.5
-image,none,chi_squared,kernel tau=0.02,50,0.595,399.5
-image,none,chi_squared,kernel tau=0.05,1,0.579,399.5
-image,none,chi_squared,kernel tau=0.05,3,0.5863,399.5
-image,none,chi_squared,kernel tau=0.05,5,0.5893,399.5
-image,none,chi_squared,kernel tau=0.05,10,0.586,399.5
-image,none,chi_squared,kernel tau=0.05,20,0.5913,399.5
-image,none,chi_squared,kernel tau=0.05,50,0.5887,399.5
+task,preprocess,distance,power,k,val_acc
+image,none,chi_squared,24,50,0.6008
+image,none,chi_squared,16,50,0.598
+image,none,chi_squared,16,20,0.597
+image,none,chi_squared,24,20,0.5962
+image,none,chi_squared,24,10,0.5927
+image,none,chi_squared,24,5,0.5913
+image,none,chi_squared,16,5,0.5897
+image,none,chi_squared,16,10,0.5895
+image,none,chi_squared,8,5,0.5873
+image,none,chi_squared,24,3,0.586
+image,none,chi_squared,16,3,0.5855
+image,none,chi_squared,8,3,0.584
+image,none,chi_squared,8,10,0.5813
+image,none,chi_squared,4,1,0.579
+image,none,chi_squared,0,1,0.579
+image,none,chi_squared,8,1,0.579
+image,none,chi_squared,16,1,0.579
+image,none,chi_squared,0,1,0.579
+image,none,chi_squared,24,1,0.579
+image,none,chi_squared,1,1,0.579
+image,none,chi_squared,4,3,0.5775
+image,none,chi_squared,8,20,0.5755
+image,none,chi_squared,1,3,0.5717
+image,none,chi_squared,4,5,0.5715
+image,sqrt,euclidean,0,1,0.563
+image,sqrt,cosine,0,1,0.5627
+image,none,chi_squared,8,50,0.56
+image,none,chi_squared,1,5,0.553
+image,none,chi_squared,4,10,0.5503
+image,standardize,cosine,0,1,0.5333
+image,none,chi_squared,4,20,0.531
+image,none,euclidean,0,1,0.5192
+image,none,cosine,0,1,0.5192
+image,none,euclidean,0,1,0.5192
+image,none,cosine,0,1,0.5192
+image,none,chi_squared,1,10,0.5092
+image,none,chi_squared,4,50,0.4803
+image,none,chi_squared,0,3,0.4708
+image,none,chi_squared,0,3,0.4708
+image,none,chi_squared,1,20,0.4705
+image,none,chi_squared,0,5,0.4695
+image,none,chi_squared,0,5,0.4695
+image,sqrt,euclidean,0,3,0.4637
+image,sqrt,cosine,0,3,0.4637
+image,sqrt,euclidean,0,5,0.4535
+image,sqrt,cosine,0,5,0.4535
+image,none,chi_squared,0,10,0.4495
+image,none,chi_squared,0,10,0.4495
+image,sqrt,euclidean,0,10,0.434
+image,sqrt,cosine,0,10,0.4338
+image,standardize,euclidean,0,1,0.43
+image,none,cosine,0,3,0.4245
+image,none,cosine,0,3,0.4245
+image,none,euclidean,0,3,0.424
+image,none,cosine,0,5,0.424
+image,none,euclidean,0,3,0.424
+image,none,cosine,0,5,0.424
+image,none,euclidean,0,5,0.4235
+image,none,euclidean,0,5,0.4235
+image,standardize,cosine,0,3,0.4215
+image,standardize,cosine,0,5,0.4213
+image,none,chi_squared,0,20,0.4093
+image,none,chi_squared,0,20,0.4093
+image,none,manhattan,0,1,0.4045
+image,none,chi_squared,1,50,0.3962
+image,standardize,cosine,0,10,0.396
+image,none,cosine,0,10,0.3932
+image,none,cosine,0,10,0.3932
+image,none,euclidean,0,10,0.393
+image,none,euclidean,0,10,0.393
+image,sqrt,cosine,0,20,0.3882
+image,sqrt,euclidean,0,20,0.388
+image,standardize,cosine,0,20,0.3792
+image,none,euclidean,0,20,0.3595
+image,none,euclidean,0,20,0.3595
+image,none,cosine,0,20,0.3593
+image,none,cosine,0,20,0.3593
+image,none,chi_squared,0,50,0.355
+image,none,chi_squared,0,50,0.355
+image,standardize,euclidean,0,3,0.3498
+image,standardize,cosine,0,50,0.3335
+image,sqrt,cosine,0,50,0.333
+image,sqrt,euclidean,0,50,0.333
+image,standardize,euclidean,0,5,0.33
+image,none,manhattan,0,3,0.319
+image,none,euclidean,0,50,0.307
+image,none,euclidean,0,50,0.307
+image,none,cosine,0,50,0.3065
+image,none,cosine,0,50,0.3065
+image,standardize,euclidean,0,10,0.3023
+image,none,manhattan,0,5,0.2802
+image,standardize,euclidean,0,20,0.2612
+image,none,manhattan,0,10,0.245
+image,standardize,euclidean,0,50,0.2175
+image,none,manhattan,0,20,0.2072
+image,none,manhattan,0,50,0.1673

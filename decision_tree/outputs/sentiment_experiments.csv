@@ -1,12 +1,12 @@
-task,max_depth,train_acc,val_acc,nodes,real_depth,seconds,min_samples_leaf,criterion
-sentiment,5,0.5359,0.4854,63,5,1.5,,
-sentiment,5,0.5359,0.4854,63,5,1.4,5,
-sentiment,5,0.5358,0.4854,63,5,1.4,20,
-sentiment,8,0.6747,0.4833,473,8,2.2,,
-sentiment,5,0.5364,0.4796,63,5,1.4,50,
-sentiment,5,0.5246,0.4713,63,5,1.5,,entropy
-sentiment,12,0.9279,0.4458,2169,12,4.3,,
-sentiment,2,0.4566,0.435,7,2,1.1,,
-sentiment,16,0.9899,0.4279,2833,16,5.2,,
-sentiment,20,0.9986,0.4271,2957,20,5.4,,
-sentiment,None,1.0,0.4254,2987,24,5.4,,
+task,settings,train_acc,val_acc,nodes,depth,seconds
+sentiment,{'max_depth': 5},0.5359,0.4854,63,5,2.1
+sentiment,"{'max_depth': 5, 'min_samples_leaf': 5}",0.5359,0.4854,63,5,5.5
+sentiment,"{'max_depth': 5, 'min_samples_leaf': 20}",0.5358,0.4854,63,5,5.0
+sentiment,{'max_depth': 8},0.6747,0.4833,473,8,2.9
+sentiment,"{'max_depth': 5, 'min_samples_leaf': 50}",0.5364,0.4796,63,5,4.2
+sentiment,"{'max_depth': 5, 'criterion': 'entropy'}",0.5246,0.4713,63,5,4.2
+sentiment,{'max_depth': 12},0.9279,0.4458,2169,12,5.6
+sentiment,{'max_depth': 2},0.4566,0.435,7,2,1.4
+sentiment,{'max_depth': 16},0.9899,0.4279,2833,16,6.5
+sentiment,{'max_depth': 20},0.9986,0.4271,2957,20,6.6
+sentiment,{'max_depth': None},1.0,0.4254,2987,24,6.8

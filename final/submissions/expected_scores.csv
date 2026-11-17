@@ -1,0 +1,13 @@
+image model,sentiment model,expected score,file
+k-NN,Neural Network,0.6437,final/submissions/image_knn__sentiment_neural_network.csv
+k-NN,k-NN,0.6004,final/submissions/image_knn__sentiment_knn.csv
+k-NN,Random Forest,0.5866,final/submissions/image_knn__sentiment_random_forest.csv
+Neural Network,Neural Network,0.5717,final/submissions/image_neural_network__sentiment_neural_network.csv
+k-NN,Decision Tree,0.5431,final/submissions/image_knn__sentiment_decision_tree.csv
+Neural Network,k-NN,0.5284,final/submissions/image_neural_network__sentiment_knn.csv
+Neural Network,Random Forest,0.5146,final/submissions/image_neural_network__sentiment_random_forest.csv
+Neural Network,Decision Tree,0.4711,final/submissions/image_neural_network__sentiment_decision_tree.csv
+Decision Tree,Neural Network,0.403,final/submissions/image_decision_tree__sentiment_neural_network.csv
+Decision Tree,k-NN,0.3596,final/submissions/image_decision_tree__sentiment_knn.csv
+Decision Tree,Random Forest,0.3459,final/submissions/image_decision_tree__sentiment_random_forest.csv
+Decision Tree,Decision Tree,0.3023,final/submissions/image_decision_tree__sentiment_decision_tree.csv

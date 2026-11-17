@@ -1,92 +1,78 @@
-task,preprocess,distance,weighting,k,val_acc,neighbour_search_seconds
-sentiment,none,euclidean,uniform,1,0.4883,4.9
-sentiment,none,euclidean,uniform,3,0.51,4.9
-sentiment,none,euclidean,uniform,5,0.5337,4.9
-sentiment,none,euclidean,uniform,10,0.55,4.9
-sentiment,none,euclidean,uniform,20,0.5713,4.9
-sentiment,none,euclidean,uniform,50,0.575,4.9
-sentiment,none,euclidean,uniform,100,0.5837,4.9
-sentiment,none,manhattan,uniform,1,0.4975,143.7
-sentiment,none,manhattan,uniform,3,0.5017,143.7
-sentiment,none,manhattan,uniform,5,0.5329,143.7
-sentiment,none,manhattan,uniform,10,0.5546,143.7
-sentiment,none,manhattan,uniform,20,0.5737,143.7
-sentiment,none,manhattan,uniform,50,0.5779,143.7
-sentiment,none,manhattan,uniform,100,0.5783,143.7
-sentiment,none,cosine,uniform,1,0.4867,6.3
-sentiment,none,cosine,uniform,3,0.5154,6.3
-sentiment,none,cosine,uniform,5,0.5258,6.3
-sentiment,none,cosine,uniform,10,0.5587,6.3
-sentiment,none,cosine,uniform,20,0.5746,6.3
-sentiment,none,cosine,uniform,50,0.5863,6.3
-sentiment,none,cosine,uniform,100,0.5713,6.3
-sentiment,none,euclidean,uniform,1,0.4883,4.9
-sentiment,none,euclidean,uniform,3,0.51,4.9
-sentiment,none,euclidean,uniform,5,0.5337,4.9
-sentiment,none,euclidean,uniform,10,0.55,4.9
-sentiment,none,euclidean,uniform,20,0.5713,4.9
-sentiment,none,euclidean,uniform,50,0.575,4.9
-sentiment,none,euclidean,uniform,100,0.5837,4.9
-sentiment,none,cosine,uniform,1,0.4867,6.3
-sentiment,none,cosine,uniform,3,0.5154,6.3
-sentiment,none,cosine,uniform,5,0.5258,6.3
-sentiment,none,cosine,uniform,10,0.5587,6.3
-sentiment,none,cosine,uniform,20,0.5746,6.3
-sentiment,none,cosine,uniform,50,0.5863,6.3
-sentiment,none,cosine,uniform,100,0.5713,6.3
-sentiment,standardize,euclidean,uniform,1,0.49,5.2
-sentiment,standardize,euclidean,uniform,3,0.5117,5.2
-sentiment,standardize,euclidean,uniform,5,0.5354,5.2
-sentiment,standardize,euclidean,uniform,10,0.5479,5.2
-sentiment,standardize,euclidean,uniform,20,0.5792,5.2
-sentiment,standardize,euclidean,uniform,50,0.5813,5.2
-sentiment,standardize,euclidean,uniform,100,0.5813,5.2
-sentiment,standardize,cosine,uniform,1,0.4883,4.7
-sentiment,standardize,cosine,uniform,3,0.5158,4.7
-sentiment,standardize,cosine,uniform,5,0.5429,4.7
-sentiment,standardize,cosine,uniform,10,0.5587,4.7
-sentiment,standardize,cosine,uniform,20,0.5713,4.7
-sentiment,standardize,cosine,uniform,50,0.5863,4.7
-sentiment,standardize,cosine,uniform,100,0.5863,4.7
-sentiment,standardize,cosine,uniform,1,0.4883,4.7
-sentiment,standardize,cosine,uniform,3,0.5158,4.7
-sentiment,standardize,cosine,uniform,5,0.5429,4.7
-sentiment,standardize,cosine,uniform,10,0.5587,4.7
-sentiment,standardize,cosine,uniform,20,0.5713,4.7
-sentiment,standardize,cosine,uniform,50,0.5863,4.7
-sentiment,standardize,cosine,uniform,100,0.5863,4.7
-sentiment,standardize,cosine,1/d^2,1,0.4883,4.7
-sentiment,standardize,cosine,1/d^2,3,0.5162,4.7
-sentiment,standardize,cosine,1/d^2,5,0.5392,4.7
-sentiment,standardize,cosine,1/d^2,10,0.5621,4.7
-sentiment,standardize,cosine,1/d^2,20,0.5717,4.7
-sentiment,standardize,cosine,1/d^2,50,0.5908,4.7
-sentiment,standardize,cosine,1/d^2,100,0.5913,4.7
-sentiment,standardize,cosine,1/d^4,1,0.4883,4.7
-sentiment,standardize,cosine,1/d^4,3,0.5158,4.7
-sentiment,standardize,cosine,1/d^4,5,0.5367,4.7
-sentiment,standardize,cosine,1/d^4,10,0.5567,4.7
-sentiment,standardize,cosine,1/d^4,20,0.5787,4.7
-sentiment,standardize,cosine,1/d^4,50,0.5938,4.7
-sentiment,standardize,cosine,1/d^4,100,0.6,4.7
-sentiment,standardize,cosine,kernel tau=0.02,1,0.4883,4.7
-sentiment,standardize,cosine,kernel tau=0.02,3,0.4988,4.7
-sentiment,standardize,cosine,kernel tau=0.02,5,0.5079,4.7
-sentiment,standardize,cosine,kernel tau=0.02,10,0.5138,4.7
-sentiment,standardize,cosine,kernel tau=0.02,20,0.5154,4.7
-sentiment,standardize,cosine,kernel tau=0.02,50,0.5175,4.7
-sentiment,standardize,cosine,kernel tau=0.02,100,0.5179,4.7
-sentiment,standardize,cosine,kernel tau=0.05,1,0.4883,4.7
-sentiment,standardize,cosine,kernel tau=0.05,3,0.5029,4.7
-sentiment,standardize,cosine,kernel tau=0.05,5,0.5217,4.7
-sentiment,standardize,cosine,kernel tau=0.05,10,0.5463,4.7
-sentiment,standardize,cosine,kernel tau=0.05,20,0.56,4.7
-sentiment,standardize,cosine,kernel tau=0.05,50,0.5737,4.7
-sentiment,standardize,cosine,kernel tau=0.05,100,0.5808,4.7
-sentiment,standardize,cosine,kernel tau=0.1,1,0.4883,4.7
-sentiment,standardize,cosine,kernel tau=0.1,3,0.5162,4.7
-sentiment,standardize,cosine,kernel tau=0.1,5,0.5387,4.7
-sentiment,standardize,cosine,kernel tau=0.1,10,0.5558,4.7
-sentiment,standardize,cosine,kernel tau=0.1,20,0.5817,4.7
-sentiment,standardize,cosine,kernel tau=0.1,50,0.5962,4.7
-sentiment,standardize,cosine,kernel tau=0.1,100,0.6,4.7
+task,preprocess,distance,power,k,val_acc
+sentiment,standardize,cosine,4,100,0.6
+sentiment,standardize,cosine,4,50,0.5938
+sentiment,standardize,cosine,1,50,0.5892
+sentiment,standardize,cosine,8,100,0.5883
+sentiment,standardize,cosine,0,50,0.5863
+sentiment,standardize,cosine,0,100,0.5863
+sentiment,none,cosine,0,50,0.5863
+sentiment,standardize,cosine,0,50,0.5863
+sentiment,standardize,cosine,0,100,0.5863
+sentiment,none,cosine,0,50,0.5863
+sentiment,standardize,cosine,1,100,0.5858
+sentiment,standardize,cosine,8,50,0.5854
+sentiment,none,euclidean,0,100,0.5837
+sentiment,none,euclidean,0,100,0.5837
+sentiment,standardize,euclidean,0,100,0.5813
+sentiment,standardize,euclidean,0,50,0.5813
+sentiment,standardize,euclidean,0,20,0.5792
+sentiment,standardize,cosine,4,20,0.5787
+sentiment,none,manhattan,0,100,0.5783
+sentiment,none,manhattan,0,50,0.5779
+sentiment,none,euclidean,0,50,0.575
+sentiment,none,euclidean,0,50,0.575
+sentiment,none,cosine,0,20,0.5746
+sentiment,none,cosine,0,20,0.5746
+sentiment,none,manhattan,0,20,0.5737
+sentiment,standardize,cosine,1,20,0.5717
+sentiment,none,euclidean,0,20,0.5713
+sentiment,none,cosine,0,100,0.5713
+sentiment,standardize,cosine,0,20,0.5713
+sentiment,none,euclidean,0,20,0.5713
+sentiment,none,cosine,0,100,0.5713
+sentiment,standardize,cosine,0,20,0.5713
+sentiment,standardize,cosine,8,20,0.57
+sentiment,standardize,cosine,0,10,0.5587
+sentiment,standardize,cosine,0,10,0.5587
+sentiment,none,cosine,0,10,0.5583
+sentiment,standardize,cosine,1,10,0.5583
+sentiment,none,cosine,0,10,0.5583
+sentiment,standardize,cosine,4,10,0.5567
+sentiment,none,manhattan,0,10,0.5546
+sentiment,none,euclidean,0,10,0.55
+sentiment,none,euclidean,0,10,0.55
+sentiment,standardize,cosine,8,10,0.5479
+sentiment,standardize,euclidean,0,10,0.5479
+sentiment,standardize,cosine,0,5,0.5429
+sentiment,standardize,cosine,0,5,0.5429
+sentiment,standardize,cosine,1,5,0.5408
+sentiment,standardize,cosine,4,5,0.5367
+sentiment,standardize,euclidean,0,5,0.5354
+sentiment,none,euclidean,0,5,0.5337
+sentiment,none,euclidean,0,5,0.5337
+sentiment,none,manhattan,0,5,0.5329
+sentiment,standardize,cosine,8,5,0.5279
+sentiment,none,cosine,0,5,0.5258
+sentiment,none,cosine,0,5,0.5258
+sentiment,standardize,cosine,1,3,0.5162
+sentiment,standardize,cosine,0,3,0.5158
+sentiment,standardize,cosine,0,3,0.5158
+sentiment,standardize,cosine,4,3,0.5158
+sentiment,none,cosine,0,3,0.5154
+sentiment,none,cosine,0,3,0.5154
+sentiment,standardize,euclidean,0,3,0.5117
+sentiment,none,euclidean,0,3,0.51
+sentiment,none,euclidean,0,3,0.51
+sentiment,standardize,cosine,8,3,0.5096
+sentiment,none,manhattan,0,3,0.5017
+sentiment,none,manhattan,0,1,0.4975
+sentiment,standardize,euclidean,0,1,0.49
+sentiment,none,euclidean,0,1,0.4883
+sentiment,standardize,cosine,0,1,0.4883
+sentiment,none,euclidean,0,1,0.4883
+sentiment,standardize,cosine,4,1,0.4883
+sentiment,standardize,cosine,1,1,0.4883
+sentiment,standardize,cosine,0,1,0.4883
+sentiment,standardize,cosine,8,1,0.4883
+sentiment,none,cosine,0,1,0.4867
+sentiment,none,cosine,0,1,0.4867
