@@ -1,11 +1,36 @@
-task,n_trees,max_features,max_depth,val_acc
-sentiment,50,sqrt,None,0.5725
-sentiment,20,sqrt,10,0.5575
-sentiment,25,sqrt,None,0.5571
-sentiment,20,sqrt,20,0.5487
-sentiment,20,sqrt,None,0.5475
-sentiment,20,50,None,0.545
-sentiment,10,sqrt,None,0.5333
-sentiment,20,log2,None,0.5096
-sentiment,5,sqrt,None,0.4788
-sentiment,1,sqrt,None,0.4304
+task,experiment,features,n_trees,max_features,max_depth,min_samples_leaf,criterion,bootstrap_fraction,voting,train_acc,val_acc,seconds
+sentiment,representation,lda s=0.1,200,1,,20,gini,1.0,soft,0.745,0.6692,0.9
+sentiment,representation,lda s=0.3,200,1,,20,gini,1.0,soft,0.731,0.6667,0.9
+sentiment,representation,lda s=0.5,200,1,,20,gini,1.0,soft,0.7185,0.6625,0.9
+sentiment,representation,raw+lda s=0.1,200,sqrt,,1,gini,1.0,soft,1.0,0.6617,4.6
+sentiment,representation,raw+lda s=0.3,200,sqrt,,1,gini,1.0,soft,1.0,0.6604,4.5
+sentiment,representation,raw+lda s=0.5,200,sqrt,,1,gini,1.0,soft,1.0,0.6525,4.5
+sentiment,representation,lda s=0.5,200,1,,1,gini,1.0,soft,0.7635,0.6483,1.5
+sentiment,representation,lda s=0.1,200,1,,1,gini,1.0,soft,0.7945,0.6475,1.4
+sentiment,representation,lda s=0.3,200,1,,1,gini,1.0,soft,0.781,0.645,1.4
+sentiment,n_trees,raw,500,sqrt,,1,gini,1.0,soft,1.0,0.6083,
+sentiment,criterion,raw,200,150,,1,entropy,1.0,soft,1.0,0.6071,14.8
+sentiment,min_samples_leaf,raw,200,150,,5,gini,1.0,soft,0.999,0.6062,10.6
+sentiment,n_trees,raw,300,sqrt,,1,gini,1.0,soft,1.0,0.6012,
+sentiment,voting,raw,200,150,,1,gini,1.0,hard,1.0,0.5988,13.7
+sentiment,max_features,raw,200,150,,1,gini,1.0,soft,1.0,0.5988,13.0
+sentiment,max_depth,raw,200,150,,1,gini,1.0,soft,1.0,0.5988,14.4
+sentiment,min_samples_leaf,raw,200,150,,2,gini,1.0,soft,1.0,0.5983,13.2
+sentiment,bootstrap_fraction,raw,200,150,,1,gini,0.25,soft,0.951,0.5983,5.0
+sentiment,min_samples_leaf,raw,200,150,,10,gini,1.0,soft,0.99,0.5975,8.0
+sentiment,bootstrap_fraction,raw,200,150,,1,gini,0.5,soft,0.9985,0.5967,8.2
+sentiment,max_features,raw,200,60,,1,gini,1.0,soft,1.0,0.5954,6.9
+sentiment,n_trees,raw,100,sqrt,,1,gini,1.0,soft,1.0,0.5946,
+sentiment,n_trees,raw,200,sqrt,,1,gini,1.0,soft,1.0,0.5938,
+sentiment,max_features,raw,200,sqrt,,1,gini,1.0,soft,1.0,0.5938,4.6
+sentiment,max_features,raw,200,9,,1,gini,1.0,soft,1.0,0.5929,3.2
+sentiment,max_depth,raw,200,150,20.0,1,gini,1.0,soft,1.0,0.5908,14.0
+sentiment,max_depth,raw,200,150,10.0,1,gini,1.0,soft,0.9845,0.5896,6.9
+sentiment,max_features,raw,200,3,,1,gini,1.0,soft,1.0,0.575,3.0
+sentiment,n_trees,raw,50,sqrt,,1,gini,1.0,soft,1.0,0.5654,
+sentiment,max_depth,raw,200,150,5.0,1,gini,1.0,soft,0.6505,0.5617,2.3
+sentiment,n_trees,raw,25,sqrt,,1,gini,1.0,soft,1.0,0.535,
+sentiment,n_trees,raw,10,sqrt,,1,gini,1.0,soft,0.99,0.5088,
+sentiment,n_trees,raw,5,sqrt,,1,gini,1.0,soft,0.948,0.475,
+sentiment,n_trees,raw,2,sqrt,,1,gini,1.0,soft,0.7865,0.4338,
+sentiment,n_trees,raw,1,sqrt,,1,gini,1.0,soft,0.7835,0.4275,
