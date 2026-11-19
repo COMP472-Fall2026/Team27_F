@@ -94,3 +94,12 @@ Expected Kaggle score: best single models 0.644 → ensemble 0.662.
 * Python 3.9.6; library versions in `requirements.txt`.
 * Seed 42 everywhere (`common.set_seed`, the split, every tree/forest seed; forest tree *i* uses seed 42 + *i*).
 * All hyper-parameters are chosen on the validation split only. The test set is used once, to write the Kaggle files.
+
+## External resources and assistance
+
+* AI tools were used for coding help and analysis. All code was reviewed by the team, and every
+  member can explain it.
+* R. L. Rocha, "Bag of Visual Words applied to image classification", Medium: the idea of treating the image
+  features as histograms, which led to the χ² distance used by k-NN.
+* Decision Tree, Random Forest and LDA references are listed in `report/decision_tree_random_forest.md`.
+* Lab material from COMP 472 (k-NN, decision trees, k-Means) was used as the starting point of the implementations.
